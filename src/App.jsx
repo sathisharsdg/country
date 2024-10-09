@@ -20,8 +20,8 @@ function App() {
               <input type="text"  placeholder='enter continent name...' onChange={e=>setSearch(e.target.value)}/>
                  {
                      country.filter((data)=>{
-                       return data.population < 50
-                      //  return search.toLowerCase() === "" ? data : data.name.common.toLowerCase().includes(search)
+                       // return data.population < 50
+                      return search.toLowerCase() === "" ? data : data.name.common.toLowerCase().includes(search)
                      }).map((country,i)=>{
                         return(
                            <div className='col-md-3 border border-bottom-3 mb-3 mt-3' key={i}>
